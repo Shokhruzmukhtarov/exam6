@@ -39,22 +39,7 @@ class PageD extends StatelessWidget {
               if (state is LoadNotificationProgress) {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is LoadNotificationSuccess) {
-                return Center(
-                  child: Column(
-                    children: [
-                      Text(state.notifications.length.toString(),style: TextStyle(color: Colors.white),),
-                      ...List.generate(state.notifications.length, (index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(9.0),
-                          child: notifications(
-                              imgPath: state.notifications[index].image,
-                              title: state.notifications[index].title,
-                              desc: state.notifications[index].body),
-                        );
-                      }),
-                    ],
-                  ),
-                );
+                return Center();
               }
 
               return Column(
