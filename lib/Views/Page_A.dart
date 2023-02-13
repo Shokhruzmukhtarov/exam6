@@ -53,8 +53,12 @@ class _PageAState extends State<PageA> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("A Screen"),
+        title: const Text("A Screen",style: TextStyle(color: Colors.red,fontSize: 28,fontWeight: FontWeight.w800),),
+        backgroundColor: Colors.green,
+        centerTitle: true,
+        elevation: 0.0,
       ),
+      backgroundColor: Colors.green,
       body:  BlocBuilder<SingleRandomUserCubit,SingleRandomUserState>(builder: (context,state){
         if(state.status == ContactStatus.loading){
           return const Center(child: CircularProgressIndicator(),);
@@ -68,8 +72,8 @@ class _PageAState extends State<PageA> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
-                    title: Text(item.login.username.toString()),
-                    subtitle: Text(item.email.toString()),
+                    title: Text(item.login.username.toString(),style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w500),),
+                    subtitle: Text(item.email.toString(),style: TextStyle(color: Colors.yellow,fontSize: 20,fontWeight: FontWeight.w500)),
                     trailing: Image.network(item.picture.medium.toString()),
                   )
                 );

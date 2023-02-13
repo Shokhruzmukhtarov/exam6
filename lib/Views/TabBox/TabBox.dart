@@ -33,6 +33,7 @@ class _TabBoxState extends State<TabBox> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       key: _key,
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey.withOpacity(1.0),
@@ -49,32 +50,37 @@ class _TabBoxState extends State<TabBox> {
                 unselectedItemColor: Colors.yellow.withOpacity(0.6),
                 onTap: (value) =>
                     context.read<TabBoxCubit>().changeTabState(value),
-                selectedLabelStyle: const TextStyle(color: Colors.grey),
-                unselectedLabelStyle: const TextStyle(color: Colors.grey),
+                selectedLabelStyle: const TextStyle(color: Colors.white),
+                unselectedLabelStyle: const TextStyle(color: Colors.white),
                 items: const [
                   BottomNavigationBarItem(
+                    backgroundColor: Colors.green,
                     icon: Text(
                       "A",
-                      style: TextStyle(fontSize: 24,color: Colors.red),
+                      style: TextStyle(fontSize: 25,color: Colors.red,fontWeight: FontWeight.w600,
+                      ),
                     ),
                     label: '',
                   ),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.yellow,
                       icon: Text(
                         "B",
-                        style: TextStyle(fontSize: 24,color: Colors.black),
+                        style: TextStyle(fontSize: 24,color: Colors.blue,fontWeight: FontWeight.w600),
                       ),
                       label: ''),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.white,
                       icon: Text(
                         "C",
-                        style: TextStyle(fontSize: 24,color: Colors.blue),
+                        style: TextStyle(fontSize: 24,color: Colors.black,fontWeight: FontWeight.w600),
                       ),
                       label: ""),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.purple,
                       icon: Text(
                         "D",
-                        style: TextStyle(fontSize: 24,color: Colors.pink),
+                        style: TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.w600),
                       ),
                       label: ""),
                 ]),

@@ -11,8 +11,12 @@ class PageB extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("PageB"),
+        title: const Text("B Screen",style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.w800)),
+        backgroundColor: Colors.yellow,
+        centerTitle: true,
+        elevation: 0.0,
       ),
+      backgroundColor: Colors.yellow,
       body: BlocProvider(
           create: (context) =>  MultiRandomUserCubit(randomUserRepository: context.read<RandomUserRepo>()),
         child: BlocBuilder<MultiRandomUserCubit,MultiRandomUserState>(builder: (context,state){
@@ -28,8 +32,8 @@ class PageB extends StatelessWidget {
                   return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
-                        title: Text(item.login.username.toString()),
-                        subtitle: Text(item.email.toString()),
+                        title: Text(item.login.username.toString(),style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w500)),
+                        subtitle: Text(item.email.toString(),style: TextStyle(color: Colors.red,fontSize: 18,fontWeight: FontWeight.w500)),
                         trailing: Image.network(item.picture.medium.toString()),
                       )
                   );

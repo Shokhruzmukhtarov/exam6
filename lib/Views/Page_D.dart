@@ -16,23 +16,16 @@ class PageD extends StatelessWidget {
       create: (BuildContext context) => GetNotificationCubit(),
       child: Scaffold(
         appBar: AppBar(
-          elevation: 0,
-          actions: [
-            // IconButton(
-            //   color: Colors.red,
-            //   onPressed: () {
-            //     LocalDatabase.deleteAllNotification();
-            //   },
-            //   icon: const Icon(Icons.delete),
-            // ),
-
-          ],
-          iconTheme: const IconThemeData(color: Colors.blue),
+          elevation: 0.0,
+          iconTheme: const IconThemeData(color: Colors.white),
+          centerTitle: true,
+          backgroundColor: Colors.purple,
           title:const Text(
-            "PageD",
-            style: TextStyle(color: Colors.white),
+            "D Screen",
+            style: TextStyle(color: Colors.white,fontSize: 28,fontWeight: FontWeight.w600),
           ),
         ),
+        backgroundColor: Colors.purple,
         body: SingleChildScrollView(
           physics:const BouncingScrollPhysics(),
           child: BlocConsumer<GetNotificationCubit, GetNotificationState>(
@@ -46,20 +39,21 @@ class PageD extends StatelessWidget {
               if (state is LoadNotificationProgress) {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is LoadNotificationSuccess) {
-                return Column(
-
-                  children: [
-                    Text(state.notifications.length.toString()),
-                    ...List.generate(state.notifications.length, (index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: notifications(
-                            imgPath: state.notifications[index].image,
-                            title: state.notifications[index].title,
-                            desc: state.notifications[index].body),
-                      );
-                    }),
-                  ],
+                return Center(
+                  child: Column(
+                    children: [
+                      Text(state.notifications.length.toString(),style: TextStyle(color: Colors.white),),
+                      ...List.generate(state.notifications.length, (index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(9.0),
+                          child: notifications(
+                              imgPath: state.notifications[index].image,
+                              title: state.notifications[index].title,
+                              desc: state.notifications[index].body),
+                        );
+                      }),
+                    ],
+                  ),
                 );
               }
 
