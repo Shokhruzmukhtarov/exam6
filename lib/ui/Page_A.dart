@@ -1,5 +1,5 @@
 import 'package:exam5/Blocs_Cubits/Cubit/Single_Cubit/Single_random_User_State.dart';
-import 'package:exam5/Views/Page_D.dart';
+import 'package:exam5/ui/Page_D.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

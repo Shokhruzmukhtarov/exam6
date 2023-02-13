@@ -2,7 +2,7 @@
 
 import 'package:exam5/Blocs_Cubits/Cubit/Get_Notification_Cubit/Get_Notification_Cubit.dart';
 import 'package:exam5/Blocs_Cubits/Cubit/Get_Notification_Cubit/Get_Notification_State.dart';
-import 'package:exam5/Views/widgets/Notification_Widget.dart';
+import 'package:exam5/ui/widgets/Notification_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

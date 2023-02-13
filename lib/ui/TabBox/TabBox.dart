@@ -1,8 +1,8 @@
 import 'package:exam5/Blocs_Cubits/Cubit/Tabbox_Cubit/tab_box_cubit.dart';
-import 'package:exam5/Views/Page_A.dart';
-import 'package:exam5/Views/Page_B.dart';
-import 'package:exam5/Views/Page_C.dart';
-import 'package:exam5/Views/Page_D.dart';
+import 'package:exam5/ui/Page_A.dart';
+import 'package:exam5/ui/Page_B.dart';
+import 'package:exam5/ui/Page_C.dart';
+import 'package:exam5/ui/Page_D.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

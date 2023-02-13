@@ -1,5 +1,6 @@
-import 'package:exam5/Views/widgets/flutter_pin_code_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/flutter_pin_code_widget.dart';
 
 class PageC extends StatefulWidget {
   const PageC({Key? key}) : super(key: key);
