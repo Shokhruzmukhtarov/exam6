@@ -2,7 +2,7 @@ import 'package:exam5/Blocs_Cubits/Cubit/Single_Cubit/Single_Random_User_Cubit.d
 import 'package:exam5/Blocs_Cubits/Cubit/Tabbox_Cubit/tab_box_cubit.dart';
 import 'package:exam5/Data/Repos/Notification_Repo.dart';
 import 'package:exam5/Data/Services/Api_Serviece.dart';
-import 'package:exam5/Views/TabBox/TabBox.dart';
+import 'package:exam5/ui/TabBox/TabBox.dart';
 import 'package:exam5/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
